@@ -4,6 +4,9 @@
   "scripts": {
     "prettier": "prettier",
     "embedme": "embedme blog-posts/**/*.md",
+    "prettier:base": "yarn run prettier \"**/*.{js,json,scss,md,ts,html,component.html}\"",
+    "prettier:write": "yarn run prettier:base --write",
+    "prettier:check": "yarn run prettier:base --list-different",
     "embedme:check": "yarn run embedme --verify",
     "embedme:write": "yarn run embedme",
     "dev-to-git": "dev-to-git"
