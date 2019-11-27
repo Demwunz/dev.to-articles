@@ -8,12 +8,12 @@ tags:
 
 By the end of this tutorial, our terminal will look like this:
 
-![My terminal](https://i.imgur.com/p1mz8du.png)
+![My terminal](/assets/terminal.png)
 
 
 These are step by step instructions from the very start to install everything we need. I'm assuming some of you have never done this before so I've been explicit where possible.
 
-If you can't wait, there is a TLDR at the bottom of this article.
+If you can't wait and aren't interested in the reasons why, there is a TLDR at the bottom of this article, which only takes a few seconds!
 
 ## [Homebrew](https://brew.sh/)
 
@@ -30,7 +30,7 @@ This will install homebrew and allow us to use `brew` from here on.
 Lets also install [wget](https://www.gnu.org/software/wget/) whilst we're doing this, to download files with
 
 ```
-$ brew install wget
+brew install wget
 ```
 
 ## [ZSH](https://www.zsh.org/)
@@ -48,42 +48,42 @@ I followed [these instructions by Rick Cogley](https://rick.cogley.info/post/use
 **Confirm the location of zsh:**
 
 ```
-$ which zsh
+which zsh
 /bin/zsh
 ```
 
 **Confirm the shell that’s set for your user:**
 
 ```
-$ dscl . -read /Users/$USER UserShell
+dscl . -read /Users/$USER UserShell
 UserShell: /bin/zsh
 ```
 **Install ZSH:**
 
 ```
-$ brew install zsh
+brew install zsh
 ```
 
 **Use brew ZSH:**
 
 ```
-$ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 Password: *********
 ```
 
-After that, restart your Terminal to have it take effect. You can also use System Preferences. Open Users & Groups, ctrl-click your username, then select “Advanced Options”. You can select your shell in there.
+After that, restart your Terminal to have it take effect.
 
 Now if you run `which` again, you’ll see the system is recognizing the one you installed:
 
 ```
-$ which zsh
+which zsh
 /usr/local/bin/zsh
 ```
 
 **Confirm you're running brew ZSH:**
 
 ```
-$ dscl . -read /Users/$USER UserShell
+dscl . -read /Users/$USER UserShell
 UserShell: /usr/local/bin/zsh
 ```
 
@@ -97,10 +97,10 @@ Ok cool, so now we have ZSH installed and we've switched from Bash to ZSH.
 > iTerm2 is a terminal emulator for macOS that does amazing things
 
 ```
-$ brew cask install iterm
+brew cask install iterm
 ```
 
-Most people prefer to use [iTerm2](https://www.iterm2.com/) over the default Terminal app due to it's customisable nature and user friendly GUI features.
+We will be installing [iTerm2](https://www.iterm2.com/), which is the most popular terminal replacement for MacOS due to it's customisable nature and user friendly GUI features.
 
 iTerm will be installed in your app directory, feel free to fire it up and continue from here.
 
@@ -108,7 +108,7 @@ It's the app featured in this tutorial and all the screenshots.
 
 ## Fonts
 
-We will install some fonts and make them available to to Therm so that you can get nice fancy icons that we will need for one of the ZSH plugins we are installing later on.
+Let's install some fonts and make them available to to iTerm so that you can get nice fancy icons that we will need for one of the ZSH plugins we are installing later on.
 
 ### [Nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
@@ -116,41 +116,41 @@ We will install some fonts and make them available to to Therm so that you can g
 First we install [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) for the icons
 
 ```
-$ brew tap caskroom/fonts
-$ brew cask install font-hack-nerd-font
+brew tap caskroom/fonts
+brew cask install font-hack-nerd-font
 ```
 
-![Nerd Fonts](https://i.imgur.com/enmYJcO.png)
+![Nerd Fonts](/assets/nerdfonts.png)
 
 ### [Fira Code](https://github.com/tonsky/FiraCode)
 > Monospaced font with programming ligatures
 
 ```
-$ brew tap caskroom/fonts
-$ brew cask install font-fira-code
+brew tap caskroom/fonts
+brew cask install font-fira-code
 ``` 
 
-![Fira Code](https://i.imgur.com/TlhJlZt.png)
+![Fira Code](/assets/firacode.png)
 
 ## [One Dark theme](https://atom.io/themes/one-dark-syntax)
 > A dark syntax theme
 
 ```
-$ wget https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors
+wget https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors
 ```
 
 You can choose any colour scheme you like, my preferred is One Dark which was originally a theme for [Atom](https://atom.io/themes/one-dark-syntax).  
-I chose to use the port made by [Nathan Buchar](https://github.com/nathanbuchar/atom-one-dark-terminal) because it's the most actively maintained for iterm/therm.
+I chose to use the port made by [Nathan Buchar](https://github.com/nathanbuchar/atom-one-dark-terminal) because it's the most actively maintained for iTerm.
 
-![one dark](https://i.imgur.com/BC2sJXT.png)
+![one dark](/assets/ondedark.png)
 
 
 This will download to your current directory.
 
 ### Colours
-Open preferences in Therm and navigate to `Profiles > Colors` then in bottom right, from the dropdown `color presets` choose `import...` and import the file we downloaded.
+Open preferences in iTerm and navigate to `Profiles > Colors` then in bottom right, from the dropdown `color presets` choose `import...` and import the file we downloaded.
 
-![presets](https://i.imgur.com/r0azWLL.png)
+![presets](/assets/colours.png)
 
 ### Fonts
 Change your fonts in the `text` tab.  
@@ -166,19 +166,19 @@ Finally we pull it all together and use [Zplug](https://github.com/zplug/zplug).
 
 
 ```
-$ brew install zplug
+brew install zplug
 ```
 
 
 There are other alternatives out there, such as [Oh My ZSH](https://ohmyz.sh/), [Antigen](http://antigen.sharats.me/) and [Antibody](https://getantibody.github.io/) but I've found for performance, management and customisation Zplug beats them all.
 
-![stats](https://i.imgur.com/aFs0pbk.png)
+![stats](/assets/stats.png)
 
 Zplug lets you use Oh My ZSH (OMZ) plugins, which is pretty much the standard for anyone customising ZSH. Most people stick with OMZ but I've found it to be slow and bloated, moreover, I dont need all the plugins included anyway. Feel free to use any of the above if you feel otherwise, but I'll be sharing my presets for my setup with Zplug. 
 
 Zplug is a well thought out and structured system:
 
-![zplug](https://i.imgur.com/UMUZLNH.png)
+![zplug](/assets/zplug.png)
 
 Next we add our settings to the `~/.zshrc` file.
 
@@ -186,7 +186,7 @@ Here is a copy of my own [.zshrc](https://gist.github.com/Demwunz/e98777abeee1bd
 
 After you've copied the below rules to your own `~/.zshrc` file you need to run 
 
-```$ zplug load``` 
+```zplug load``` 
 
 which will source the plugins and add commands to your `$PATH`
 
@@ -270,7 +270,7 @@ We have gone for Spaceship Prompt, which is on [line 49 of my .zshrc file](https
 - low battery indicator
 - plus much more...	
 
-![Spaceship](https://i.imgur.com/dCT254N.png)
+![Spaceship](/assets/spaceship.png)
 
 Restart your terminal and you should be all set to go!
 
@@ -279,7 +279,7 @@ Restart your terminal and you should be all set to go!
 ### [Exa](https://the.exa.website/)
  
 ```
-$ brew install exa
+brew install exa
 ```
 
 > A modern replacement for `ls`.
@@ -288,14 +288,14 @@ $ brew install exa
 As you could see in the original screenshot at the top of this page, the folders and files were nicely highlighted by [Exa](https://the.exa.website/). 
 It can do all kinds of nifty things for example show you a tree view of a directory.
 
-![](https://i.imgur.com/K77po6M.png)
+![](/assets/exa.png)
 
 ### [The Fuck](https://github.com/nvbn/thefuck) (yes...really)
 
 > Magnificent app which corrects your previous console command.
  
 ```
-$ brew install thefuck
+brew install thefuck
 ```
 
 If you ever make mistakes, as I often do, like in the original screenshot at the top, It can be a pain in the neck to type out the correct command again, or respond to the command line output, this is where [the fuck](https://github.com/nvbn/thefuck) comes in. 
@@ -307,7 +307,7 @@ eval "$(thefuck --alias)"
 
 ```
 
-![thefuck](https://i.imgur.com/HVJGxd7.png)
+![thefuck](/assets/thefuck.png)
 
 You simply type `fuck` (or something else if you change it in the settings) and it will attempt to work out how to resolve your problem and you can confirm or cancel.
 
@@ -316,17 +316,17 @@ You can see the full [features in the documentation](https://github.com/nvbn/the
 Also [see what Osho has to say about the word fuck](https://www.youtube.com/watch?v=6D7rWLzloOI).
 
 
-![asdf](https://i.imgur.com/ntKd86n.png)
+![asdf](/assets/asdf.png)
 
 ## tldr; version
 Assuming you already have Homebrew installed and are familiar with ZSH, here is the tldr; version:
 
 ```
-$ brew install wget zsh zplug exa thefuck asdf
-$ brew tap caskroom/fonts
-$ brew cask install font-hack-nerd-font font-fira-code therm
+brew install wget zsh zplug exa thefuck asdf
+brew tap caskroom/fonts
+brew cask install font-hack-nerd-font font-fira-code iTerm
 ```
 	
-Copy and amend the contents from this [gist](https://gist.github.com/Demwunz/e98777abeee1bd1e6ac74f7a9827a97e) and then launch therm
+Copy and amend the contents from this [gist](https://gist.github.com/Demwunz/e98777abeee1bd1e6ac74f7a9827a97e) and then launch iTerm
 
 ---
