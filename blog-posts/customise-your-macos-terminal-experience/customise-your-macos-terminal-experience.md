@@ -9,7 +9,7 @@ tags: opensource, productivity, zsh, macos
 
 By the end of this tutorial, our terminal will look like this:
 
-![My terminal](./assets/terminal.png)
+![My terminal](https://i.imgur.com/p1mz8du.png)
 
 
 These are step by step instructions from the very start to install everything we need. I'm assuming some of you have never done this before so I've been explicit where possible.
@@ -121,7 +121,7 @@ brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
 ```
 
-![Nerd Fonts](./assets/nerdfonts.png)
+![Nerd Fonts](https://i.imgur.com/enmYJcO.png)
 
 ### [Fira Code](https://github.com/tonsky/FiraCode)
 > Monospaced font with programming ligatures
@@ -131,7 +131,7 @@ brew tap caskroom/fonts
 brew cask install font-fira-code
 ``` 
 
-![Fira Code](./assets/firacode.png)
+![Fira Code](https://i.imgur.com/TlhJlZt.png)
 
 ## [One Dark theme](https://atom.io/themes/one-dark-syntax)
 > A dark syntax theme
@@ -143,7 +143,7 @@ wget https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/maste
 You can choose any colour scheme you like, my preferred is One Dark which was originally a theme for [Atom](https://atom.io/themes/one-dark-syntax).  
 I chose to use the port made by [Nathan Buchar](https://github.com/nathanbuchar/atom-one-dark-terminal) because it's the most actively maintained for iTerm.
 
-![one dark](./assets/ondedark.png)
+![one dark](https://i.imgur.com/BC2sJXT.png)
 
 
 This will download to your current directory.
@@ -151,7 +151,7 @@ This will download to your current directory.
 ### Colours
 Open preferences in iTerm and navigate to `Profiles > Colors` then in bottom right, from the dropdown `color presets` choose `import...` and import the file we downloaded.
 
-![presets](./assets/colours.png)
+![presets](https://i.imgur.com/r0azWLL.png)
 
 ### Fonts
 Change your fonts in the `text` tab.  
@@ -173,13 +173,13 @@ brew install zplug
 
 There are other alternatives out there, such as [Oh My ZSH](https://ohmyz.sh/), [Antigen](http://antigen.sharats.me/) and [Antibody](https://getantibody.github.io/) but I've found for performance, management and customisation Zplug beats them all.
 
-![stats](./assets/stats.png)
+![stats](https://i.imgur.com/aFs0pbk.png)
 
 Zplug lets you use Oh My ZSH (OMZ) plugins, which is pretty much the standard for anyone customising ZSH. Most people stick with OMZ but I've found it to be slow and bloated, moreover, I dont need all the plugins included anyway. Feel free to use any of the above if you feel otherwise, but I'll be sharing my presets for my setup with Zplug. 
 
 Zplug is a well thought out and structured system:
 
-![zplug](./assets/zplug.png)
+![zplug](https://i.imgur.com/UMUZLNH.png)
 
 Next we add our settings to the `~/.zshrc` file.
 
@@ -271,7 +271,7 @@ We have gone for Spaceship Prompt, which is on [line 49 of my .zshrc file](https
 - low battery indicator
 - plus much more...	
 
-![Spaceship](./assets/spaceship.png)
+![Spaceship](https://i.imgur.com/dCT254N.png)
 
 Restart your terminal and you should be all set to go!
 
@@ -289,7 +289,7 @@ brew install exa
 As you could see in the original screenshot at the top of this page, the folders and files were nicely highlighted by [Exa](https://the.exa.website/). 
 It can do all kinds of nifty things for example show you a tree view of a directory.
 
-![](./assets/exa.png)
+![exa](https://i.imgur.com/K77po6M.png)
 
 ### [The Fuck](https://github.com/nvbn/thefuck) (yes...really)
 
@@ -308,7 +308,7 @@ eval "$(thefuck --alias)"
 
 ```
 
-![thefuck](./assets/thefuck.png)
+![thefuck](https://i.imgur.com/HVJGxd7.png)
 
 You simply type `fuck` (or something else if you change it in the settings) and it will attempt to work out how to resolve your problem and you can confirm or cancel.
 
