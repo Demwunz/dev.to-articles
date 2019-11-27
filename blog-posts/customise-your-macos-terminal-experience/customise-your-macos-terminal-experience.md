@@ -3,7 +3,7 @@ title: Take total control of your MacOS terminal experience by customising it!
 published: false
 cover_image: "https://raw.githubusercontent.com/Demwunz/dev.to-articles/master/blog-posts/customise-your-macos-terminal-experience./assets/terminal.png"
 description: Take total control of your terminal experience by installing open source packages that give you more feedback of what you are doing.
-tags: opensource, productivity, webdev
+tags: opensource, productivity, zsh, macos
 ---
 
 
