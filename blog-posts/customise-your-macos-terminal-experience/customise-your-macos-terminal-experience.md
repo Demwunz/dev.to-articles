@@ -1,6 +1,6 @@
 ---
 title: Take control of your MacOS terminal experience by customising it!
-published: true
+published: false
 description: Take control of your terminal experience by installing open source packages that give you more feedback of what you are doing.
 tags: opensource, productivity, webdev
 ---
